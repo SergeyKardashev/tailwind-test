@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white">
+    <h1 class="text-3xl text-center font-bold underline">Tailwind</h1>
+
+    <div class="bg-gradient-to-r from-blue-900 to-teal-500 text-white">текст на градиентном фоне</div>
+
+    <div class="flex justify-center items-center bg-teal-300">
+      <div class="p-4">Элемент 1</div>
+      <div class="p-4">Элемент 2</div>
+      <div class="p-4">Э 3</div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4">
+      <div class="p-4 bg-cyan-500">Элемент 1</div>
+      <div class="p-4 bg-fuchsia-400">Элемент 2</div>
+      <div class="p-4 bg-green-500">Элемент 3</div>
+    </div>
+
+    <div class="m-4 p-4 bg-gray-200">внешние и внутренние отступы.</div>
+    <img class="blur-sm" src="./images/geometry_320x240.jpg" alt="Размытое изображение" />
+
+    <div class="w-6/12 mt-10 bg-gray-100 shadow-lg p-6 mb-6 bg-white rounded-lg">контент с заметной тенью</div>
+
+    <button class="p-2 m-10 bg-blue-400 text-white rounded hover:bg-blue-900 transition-colors duration-1000">
+      Наведи для анимации
+    </button>
+  </body>
+</html>
