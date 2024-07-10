@@ -1,24 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="../dist/output.css" rel="stylesheet" />
-    <style>
-      a {
-        color: coral;
-      }
-    </style>
-  </head>
-  <body class="bg-slate-500">
-    <h1 class="pl-4 pt-20 text-6xl text-left font-bold underline">Tailwind</h1>
-    <hr class="border-lime-400 h-8 p-10 m-10 border-y-1 border-b-8" />
-    <p class="text-3xl pl-4">Различные блоки - <a href="./assorted-stuff.html" target="_blank">песочница</a></p>
-    <p class="text-3xl pl-4">
-      Горизонтальный <a href="./hr.html" target="_blank">разделитель</a> - сделай кастомных размеров
-    </p>
-    <p class="text-3xl pl-4">Адаптивная <a href="./sandbox-card.html" target="_blank">карточка товара</a></p>
-    <p class="text-3xl pl-4">Адаптивное <a href="./sandbox-navbar.html" target="_blank">навигационное меню</a></p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind</title>
+  <link href="./output.css" rel="stylesheet" />
+  <style>
+    a {
+      color: coral;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-500">
+  <h1 class="pl-4 pt-20 text-6xl text-left font-bold underline">Tailwind</h1>
+
+  <hr class="border-lime-400 h-8 p-10 m-10 border-y-1 border-b-8" />
+  <div class="*:pl-4">
+    <h2 class="text-3xl  pt-4 pb-2 font-black">Оглавление. <span class="font-light">Бонус - стиль всем потомкам применен в предке</span></h2>
+    <ul class="*:text-2xl">
+      <li>Различные блоки - <a href="./assorted-stuff.html" target="_blank">песочница</a></li>
+      <li>Горизонтальный <a href="./hr.html" target="_blank">разделитель </a>кастомных размеров</li>
+      <li>Адаптивная <a href="./sandbox-card.html" target="_blank">карточка товара</a></li>
+      <li>Адаптивное <a href="./sandbox-navbar.html" target="_blank">навигационное меню</a></li>
+      <li><a href="./dark-mode.html" target="_blank">Темная тема</a></li>
+    </ul>
+  </div>
+
+  <!-- стиль всем потомкам -->
+  <div class="bg-slate-800 p-10 m-4">
+    <h2 class="text-sky-400 text-3xl">List - Styling direct children (*-{modifier})</h2>
+    <ul
+      class="*:rounded-full *:border *:border-sky-100 *:bg-sky-50 *:px-2 *:py-0.5 *:m-2 *:inline-block dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 ...">
+      <li>Sales</li>
+      <li>Marketing</li>
+      <li>SEO</li>
+    </ul>
+    <p>Children can’t override their own styling</p>
+  </div>
+
+  <!-- Адаптивная карточка юзера -->
+  <div
+    class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+    <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="./images/cat.jpg" alt="Face" />
+    <div class="text-center space-y-2 sm:text-left">
+      <div class="space-y-0.5">
+        <p class="text-lg text-black font-semibold">Ann</p>
+        <p class="text-slate-500 font-medium">Designer</p>
+      </div>
+      <button
+        class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
+    </div>
+  </div>
+</body>
+
 </html>
