@@ -30,11 +30,14 @@
 
   <!-- стиль всем потомкам -->
   <div class="bg-slate-800 p-10 m-4">
-    <h2 class="text-sky-400 text-3xl">List - Styling direct children (*-{modifier})</h2>
+    <h2 class="text-sky-400 text-3xl pl-[90px] bg-slate-900">List - Styling direct children (*-{modifier})</h2>
+    <p class="text-orange-500">Произвольные значения - отступ слева pl-[90px] (arbitrary values)</p>
     <ul
       class="*:rounded-full *:border *:border-sky-100 *:bg-sky-50 *:px-2 *:py-0.5 *:m-2 *:inline-block dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 ...">
-      <li>Sales</li>
+      <li class="ring-4 ring-orange-500 ring-offset-4 ring-offset-sky-400">Sales</li>
       <li>Marketing</li>
+      <!-- Using arbitrary values -->
+      <li>arbitrary values</li>
       <li>SEO</li>
     </ul>
     <p>Children can’t override their own styling</p>
